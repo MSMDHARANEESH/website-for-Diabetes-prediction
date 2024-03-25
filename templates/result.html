@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>Diabetes Prediction Result</title>
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -34,7 +33,7 @@
         <div class="result-container">
             <h1>Diabetes Prediction Result</h1>
             <!-- Check if result indicates being affected by diabetes and apply appropriate color -->
-            <p class="result-text" style="color: {{ 'red' if result == 'Affected by diabetes' else 'green' }}">{{ result }}</p>
+            <p class="result-text text-{{ 'danger' if result == 'Affected by diabetes' else 'success' }}">{{ result }}</p>
         </div>
     </div>
 </body>
